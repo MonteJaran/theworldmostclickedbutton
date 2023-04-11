@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The world most clicked button!</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <style>
+      body {
+        height: 160vh;
+        width: 100vw;
+        margin: 0;
+      }
+    
+      #chosen-body {
+        display: flex;
+        flex-direction: column;
+        height: 160vh;
+        width: 100vw;
+      }
+    
+      #main-div {
+        height: 100%;
+        background-color: #bde2dfaf;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #ccc;
+      }
+    
+      #extended-div1 {
+        height: 60%;
+        width: 100%;
+        background-color: #bde2dfaf;
+        display: flex;
+        flex-direction: row;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+      }
+    
+      .inner-div {
+        flex: 1;
+        background-color: #86dbb1;
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .inner-div:last-child #ad-container {
+        border: none;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      #ad-container {
+        height: 80%;
+        width: 60%;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      #main-div button {
+        padding: 10px;
+        background-color: #85dab2;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+    
+      #counter {
+        font-size: 48px;
+        font-weight: bold;
+        color: #69aa8c;
+        margin-bottom: 10px;
+      }
+    
+      .support-text {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: #5c5c5c;
+        margin: auto;
+        padding: 20px;
+        background-color: #86dbb100;
+        border: none;
+}
+    </style>
+    
+    
+  </head>
+  <body style="background-color: #bde2dfaf ;" id="my-body">
+    <div id="chosen-body">
+      <div id="main-div">
+        <div id="counter">
+          
+            <span id="span" style="user-select: none; caret-color: #bde2dfaf;">0</span>
+          
+        </div>        
+        <button id="increment-btn">Click me!</button>
+        <a id="checkthisout" class="bottom-right">Check this out &#8595;</a>
+        <div id="notification-container"></div>
+      </div>
+      <div id="extended-div1">
+        <div class="inner-div"> 
+          <div class="support-text">
+            <h1> Something about me:</h1>
+          </div>
+        </div>
+        <div class="inner-div">
+          <div class="inner-div">
+            <div class="support-text">
+              <h1>Support us:</h1> <br><br>
+              Even the most clicked button needs support! Take a look at the ad right from this message and open it if you like it!
+              <br><br><i>50%</i> revenue will be donated to people <i>in need!</i><br><br>
+            </div>
+          </div>
+        </div>
+        <div class="inner-div">
+          <div id="ad-container">Ad goes here</div>
+        </div>
+      </div>
+      
+    </div>
+    <script type="module" src="script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    
+  </body>
+</html>
